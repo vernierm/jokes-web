@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Jokes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <table style="width:100%" border="1">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Joke</th>
+            <th>Likes</th>
+            <th>Dislikes</th>
+            <th>Total</th>
+            <th>Vote</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="joke, it : ${jokes}">
+            <td th:text="${it.count}">&nbsp;</td>
+            <td th:text="${joke.content}" width="80%">&nbsp;</td>
+            <td th:text="${joke.likes}">&nbsp;</td>
+            <td th:text="${joke.dislikes}">&nbsp;</td>
+            <td th:text="${joke.likes - joke.dislikes}">&nbsp;</td>
+            <td>
+                <form action="#" th:action="@{/like/} + ${{joke.id}}" method="post">
+                    <button type="submit">LIKE</button>
+                </form>
+                <form action="#" th:action="@{/dislike/} + ${{joke.id}}" method="post">
+                    <button type="submit">DISLIKE</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="/new">Insert new joke.</a>
+</body>
+</html>

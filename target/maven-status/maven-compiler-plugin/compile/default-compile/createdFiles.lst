@@ -1,0 +1,8 @@
+app\model\JokeForm.class
+app\service\JokeService.class
+app\service\JokeServiceImpl.class
+app\controller\NewJokeController.class
+app\model\Joke.class
+app\repository\JokeRepository.class
+app\controller\HomeController.class
+app\Application.class

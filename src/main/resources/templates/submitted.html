@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>New joke input</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1> New joke added: </h1>
+<p th:text="'Submitted: ' + ${jokeForm.joke}" />
+<a href="/">View all jokes.</a>
+</body>
+</html>
