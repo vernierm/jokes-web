@@ -1,6 +1,7 @@
 #MAVEN
 target/
 mvn*
+.mvn/
 
 #IDEA
 # Intellij
